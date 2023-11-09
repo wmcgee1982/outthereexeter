@@ -104,7 +104,7 @@ nav li a:hover {
 svg {
     grid-area: lo;
     display: inline-block;
-    background:url(../Assets/BCK_GRND.jpg);
+    background:url(.Assets/BCK_GRND.jpg);
     width:40vmin; height:auto;
     margin: 10vmin;
     border-radius: 50%;
