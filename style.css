@@ -1,0 +1,308 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif, Helvetica, Arial, Verdana;
+}
+
+/* Reduce the "white flash" in new tabs */
+
+browser[type="content-primary"], 
+browser[type="content"] {
+  background: #70afd4 !important;
+}
+
+
+body {
+    background:url(../Assets/BCK_GRND.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s ease-in-out;
+    position: sticky;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
+.container {
+    padding: 1em; 
+}
+
+nav {
+    overflow: hidden;
+    position: fixed; 
+    width: 100vw;
+    z-index: 1000;
+    background:url(../Assets/BCK_GRND.jpg);
+    rotate: 10deg;
+    right: -50px;
+    padding-top: 100px;
+    top: -110px;
+    box-shadow: -10px 10px 0px 0px rgba(0,0,0,0.1);}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration-style: wavy;
+    text-underline-offset: 0.3em;
+    font-weight: lighter;
+    letter-spacing: 0.3rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-shadow: white;
+}
+
+#current {
+    color:#000;
+}
+
+#current:hover {
+    text-decoration-color: #ff71cb;
+    color: #ff71cb;
+    text-shadow: white;
+    opacity: 0.8;
+}
+
+/* Change the link color on hover */
+nav li a:hover {
+    text-decoration-color: #ff71cb;
+    color: #ff71cb;
+    text-shadow: white;
+    opacity: 0.8;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "lo lo mi mi"
+    "pu pu g1 g1"
+    "go go go go";
+    gap: 0.1rem;
+}
+
+svg {
+    grid-area: lo;
+    display: inline-block;
+    background:url(../Assets/BCK_GRND.jpg);
+    width:40vmin; height:auto;
+    margin: 10vmin;
+    border-radius: 50%;
+    transition-delay: 3s;
+    transition: 0.3s ease-in-out;
+    rotate: -10deg;
+    box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
+}
+
+svg:hover {
+    width:40vmin; height:auto;
+    margin: 10vmin;
+    border-radius: 10%;
+    transition: 0.3s ease-in-out;
+    rotate: -20deg;
+}
+
+.font1 {
+    font-size: 4px;
+    transition: 0.3s ease-in-out;
+    animation: mymove 5s infinite;
+}
+
+svg:hover .font1 {
+    transition:font-size .1s ease-in;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.font2 {
+    font-size: 7px;
+    transition: 0.2s ease-in-out;
+    animation: anifont1 5s;
+}
+
+svg:hover .font2 {
+    transition:font-size .3s ease-in;
+    font-size: 12.5px;
+}
+
+.font3 {
+    font-size: 3px;
+    transition: 0.2s ease-in-out;
+    animation: anifont2 5s;
+}
+
+svg:hover .font3 {
+    transition:font-size .5s ease-in;
+    font-size: 4px;
+}
+
+@keyframes anifont1 {
+    5% {opacity: 0;}
+}
+
+@keyframes anifont2 {
+    12% {opacity: 0;}
+}
+
+
+
+/* *** Text *** */
+
+.mission {
+    grid-area: mi;
+    overflow: none;
+    text-align: justify;
+    padding: 10rem 3rem 0rem 3rem;
+
+    color: #323232;
+    text-shadow: #000000;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+
+    animation: animission 20s infinite;
+    transition: 1s ease-in-out;
+
+}
+
+.mission a {
+    color: #323232;
+    text-shadow: #000000;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    animation: animission 30s infinite;
+    transition: 1s ease-in-out;
+}
+
+@keyframes animission {
+    0% {color: #00e0e9;}
+    2% {color: #ffd8a1;}
+    4% {color: #ffccd6;}
+    6% {color: #ff71cb;}
+    8% {color: #9680f2;}
+    10% {color: #323232;}
+}
+
+.purpose {
+    grid-area: pu;
+    overflow: none;
+    text-align: justify;
+    padding: 3rem 3rem 3rem 5rem;
+    color: #323232;
+    text-shadow: #000000;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+
+    animation: anipurpose 30s infinite;
+    transition: 1s ease-in-out;
+}
+
+.purpose a {
+    color: #323232;
+    text-shadow: #000000;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    animation: anipurpose 30s infinite;
+    transition: 1s ease-in-out;
+}
+
+@keyframes anipurpose {
+    4% {color: #00e0e9;}
+    6% {color: #ffd8a1;}
+    8% {color: #ffccd6;}
+    10% {color: #ff71cb;}
+    12% {color: #9680f2;}
+    14% {color: #323232;}
+}
+
+.purpose ul {
+    list-style-type: circle;
+    line-height: 1.5;
+    list-style-position: outside;
+    list-style-image: url("/Assets/LGBTQI+\ Check\ Tick.png");
+    margin: 2rem;
+}
+
+.space1 {
+    grid-area: g1;
+    display: inline-block; 
+    position: relative; 
+    width: 400px; height: 400px; 
+    overflow: hidden; 
+    border-radius: 50%;
+    background: url(../Assets/BCK_GRND.jpg);
+    border: solid 20px;
+    border-image: url(../Assets/BCK_GRND.jpg) 0;
+    align-items: right;
+    rotate: 20deg;
+    animation: rotation 29s infinite linear;
+    margin: 0rem 0rem 0rem 10rem;
+    box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+video {
+    width: auto; height: 375px; margin-left: -150px;
+}
+
+.space2 {
+    grid-area: g2;
+}
+
+.goals {
+    grid-area: go;
+    overflow: none;
+    text-align: justify;
+    padding: 5rem 10rem 5rem 10rem;
+    left: -100px;
+
+    color: #ffd8a1;
+    text-shadow: #000000;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+
+    transition: 1s ease-in-out;
+
+    background: #9680f2;
+    box-shadow: 20px -20px 0px 0px rgba(0,0,0,0.1);
+    rotate: -5deg;
+    margin: 15vmin;
+    width: 80vw;
+}
