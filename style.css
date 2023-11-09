@@ -42,7 +42,7 @@ nav {
     position: fixed; 
     width: 100vw;
     z-index: 1000;
-    background:url(../Assets/BCK_GRND.jpg);
+    background:url(./Assets/BCK_GRND.jpg);
     rotate: 10deg;
     right: -50px;
     padding-top: 100px;
