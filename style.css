@@ -257,9 +257,9 @@ svg:hover .font3 {
     width: 400px; height: 400px; 
     overflow: hidden; 
     border-radius: 50%;
-    background: url(../Assets/BCK_GRND.jpg);
+    background: url(./Assets/BCK_GRND.jpg);
     border: solid 20px;
-    border-image: url(../Assets/BCK_GRND.jpg) 0;
+    border-image: url(./Assets/BCK_GRND.jpg) 0;
     align-items: right;
     rotate: 20deg;
     animation: rotation 29s infinite linear;
